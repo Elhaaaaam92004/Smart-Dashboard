@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Personal Dashboard</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Header: Greeting + Time -->
+        <div class="header">
+            <h1 id="greeting"></h1>
+            <p id="date-time"></p>
+        </div>
+
+        <!-- Goals Section -->
+        <div class="goals">
+            <h2>My Goals</h2>
+            <div class="goal-input">
+                <input type="text" id="goalInput" placeholder="Add a new goal">
+                <button id="addGoalBtn">Add</button>
+            </div>
+            <ul id="goalList"></ul>
+        </div>
+
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <button id="toggleTheme">Toggle Theme</button>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

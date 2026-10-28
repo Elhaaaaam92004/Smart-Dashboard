@@ -1,0 +1,194 @@
+/* ===== Reset & Basic Setup ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Dashboard Container ===== */
+.dashboard {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+/* ===== Header ===== */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+/* ===== Goals ===== */
+.goals h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.goal-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.goal-input input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.goal-input input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.goal-input button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.goal-input button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#goalList {
+    list-style: none;
+}
+
+#goalList li {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+#goalList li .goal-text {
+    font-size: 1rem;
+}
+
+#goalList li .delete i {
+    color: #ff4d4d;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#goalList li .delete i:hover {
+    transform: scale(1.2);
+}
+
+/* ===== Theme Toggle ===== */
+.theme-toggle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.theme-toggle button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+/* ===== Dark Theme ===== */
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.dark-theme .dashboard {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .header p {
+    color: #ccc;
+}
+
+.dark-theme #goalList li {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.dark-theme #goalList li .delete i {
+    color: #ff6b6b;
+}
+
+.dark-theme .goal-input input {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+.dark-theme .goal-input button {
+    background-color: #bb86fc;
+    color: #000;
+}
+
+.dark-theme .theme-toggle button {
+    background-color: #03dac6;
+    color: #000;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+    .dashboard {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .goal-input input, .goal-input button, .theme-toggle button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
